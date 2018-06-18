@@ -76,7 +76,7 @@ class Muser extends Database
     
     
     public function insertUser() {
-        for($i = 1; $i <= 100; $i++) {
+        for($i = 1; $i <= 100000; $i++) {
             $sql = "INSERT INTO " . $this->_table . "(`username`, `password`, `level`) 
             values('Hello " . $i . "', '" . md5($i) . "', '" . rand(1, 2) . "')";
             $this->query($sql);
